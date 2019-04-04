@@ -143,6 +143,7 @@ class gitea::install (
       source        => $source_url,
       checksum      => $checksum,
       checksum_type => $checksum_type,
+      proxy         => 'http://wwwproxy.unimelb.edu.au:8000',
       notify        => [
         Exec["permissions:${$installation_directory}/gitea"],
         Service['gitea']

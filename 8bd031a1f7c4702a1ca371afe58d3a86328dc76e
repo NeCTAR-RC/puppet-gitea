@@ -1,0 +1,8 @@
+Code-Review+1: Adrian Smith <aussieade@gmail.com>
+Code-Review+2: Sam Morrison <sam.morrison@unimelb.edu.au>
+Verified+1: Jenkins <no-reply+jenkins@nectar.org.au>
+Submitted-by: Sam Morrison <sam.morrison@unimelb.edu.au>
+Submitted-at: Thu, 04 Apr 2019 11:40:56 +1100
+Reviewed-on: https://review.rc.nectar.org.au/c/NeCTAR-RC/puppet-gitea/+/17229
+Project: NeCTAR-RC/puppet-gitea
+Branch: refs/heads/nectar/v1.0.4

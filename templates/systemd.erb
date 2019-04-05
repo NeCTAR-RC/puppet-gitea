@@ -9,6 +9,8 @@ User=<%= @owner %>
 ExecStart=<%= @installation_directory %>/gitea web
 PIDFile=/var/spool/gitea/pid/master.pid
 LimitNOFILE=49152
-
+<%- if @http_proxy -%>
+Environment="HTTP_PROXY=<%= @http_proxy %>; HTTPS_PROXY=<%= @http_proxy %>" 
+<%- end -%>
 [Install]
 WantedBy=multi-user.target

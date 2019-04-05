@@ -16,6 +16,98 @@
       "revId": "c485e97f3bb8c80e34741a805555b5e12cc5d14d",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "754e4d7b_fbd035cd",
+        "filename": "data/common.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2019-04-05T10:06:50Z",
+      "side": 1,
+      "message": "I think you want to replicate what is here for gitea::home. Looks like it\u0027s the same type of variable that we want to use for proxy. Adrian is right - don\u0027t quote this.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 22
+      },
+      "revId": "c485e97f3bb8c80e34741a805555b5e12cc5d14d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dddf712f_6c132cbd",
+        "filename": "manifests/init.pp",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2019-04-05T10:06:50Z",
+      "side": 1,
+      "message": "I haven\u0027t done much with the new-style data types, but I think you really want this to be:\nOptional[String] $http_proxy\n\nThat will mean that it\u0027ll be undef by default, unless set. This is what we want.",
+      "range": {
+        "startLine": 116,
+        "startChar": 3,
+        "endLine": 116,
+        "endChar": 21
+      },
+      "revId": "c485e97f3bb8c80e34741a805555b5e12cc5d14d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad2af179_db5ae6db",
+        "filename": "manifests/install.pp",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2019-04-05T10:06:50Z",
+      "side": 1,
+      "message": "May want Optional[String] here too. Will need to test that though",
+      "range": {
+        "startLine": 87,
+        "startChar": 2,
+        "endLine": 87,
+        "endChar": 20
+      },
+      "revId": "c485e97f3bb8c80e34741a805555b5e12cc5d14d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e914d24c_f8b27310",
+        "filename": "templates/systemd.erb",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000077
+      },
+      "writtenOn": "2019-04-05T10:06:50Z",
+      "side": 1,
+      "message": "Can this be two lines instead? I assumed so by the docs I saw. It would be much cleaner.\n\nAlso just want to check that you\u0027ve tested the \u0027-\u0027 in the erb tags and that they do the right thing here with newlines",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 11
+      },
+      "revId": "c485e97f3bb8c80e34741a805555b5e12cc5d14d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
     }
   ]
 }

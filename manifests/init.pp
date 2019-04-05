@@ -113,6 +113,8 @@ class gitea (
   String $log_directory,
   String $attachment_directory,
 
+  String $http_proxy,
+
   Hash $configuration_sections,
 
   Boolean $manage_service,

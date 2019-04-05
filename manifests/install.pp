@@ -84,6 +84,7 @@ class gitea::install (
   String $service_path           = $gitea::service_path,
   String $service_provider       = $gitea::service_provider,
   String $service_mode           = $gitea::service_mode,
+  String $http_proxy             = $gitea::http_proxy,
   ) {
 
   file { $repository_root:
@@ -143,6 +144,7 @@ class gitea::install (
       source        => $source_url,
       checksum      => $checksum,
       checksum_type => $checksum_type,
+      proxy         => "${http_proxy}",
       notify        => [
         Exec["permissions:${$installation_directory}/gitea"],
         Service['gitea']

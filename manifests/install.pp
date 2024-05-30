@@ -122,9 +122,9 @@ class gitea::install (
   }
 
   if ($package_ensure) {
-    $kernel_down=downcase($::kernel)
+    $kernel_down=downcase($facts['kernel'])
 
-    case $::architecture {
+    case $facts['os']['architecture'] {
       /(x86_64)/: {
         $arch = 'amd64'
       }
@@ -132,7 +132,7 @@ class gitea::install (
         $arch = '386'
       }
       default: {
-        $arch = $::architecture
+        $arch = $facts['os']['architecture']
       }
     }
 
@@ -144,7 +144,7 @@ class gitea::install (
       source        => $source_url,
       checksum      => $checksum,
       checksum_type => $checksum_type,
-      proxy         => "${http_proxy}",
+      proxy         => $http_proxy,
       notify        => [
         Exec["permissions:${$installation_directory}/gitea"],
         Service['gitea']

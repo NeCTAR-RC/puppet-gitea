@@ -84,7 +84,7 @@ class gitea::config (
     notify => Exec["permissions:${installation_directory}/custom"],
   }
 
-  create_ini_settings($template_app_ini_sections, $gitea_configuration)
+  inifile::create_ini_settings($template_app_ini_sections, $gitea_configuration)
 
   exec { "permissions:${installation_directory}/custom":
     command     => "chown -Rf ${owner}:${group} ${installation_directory}/custom",
